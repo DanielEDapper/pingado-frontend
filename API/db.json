@@ -1,0 +1,326 @@
+[
+    {
+        "mes": 1,
+        "nomeMes": "Janeiro",
+        "cafes": [
+            {
+                "nome": "Aurora",
+                "origem": "Chapada Diamantina - Bahia",
+                "notas": [
+                    "Pêssego",
+                    "Maracujá",
+                    "Mel"
+                ],
+                "imagem": "./Assets/Image/CoffeePackage/JaneiroEdition/Pingado_Aurora_Janeiro.png"
+            },
+            {
+                "nome": "Brisa",
+                "origem": "Capaó - Espirito Santo",
+                "notas": [
+                    "Jasmim",
+                    "Chá Branco",
+                    "Mel"
+                ],
+                "imagem": "./Assets/Image/CoffeePackage/JaneiroEdition/Pingado_Brisa_Janeiro.png"
+            },
+            {
+                "nome": "Reserva do Vale",
+                "origem": "Matiqueira de Minas",
+                "notas": [
+                    "Chocolate",
+                    "Caramelo",
+                    "Avelã"
+                ],
+                "imagem": "./Assets/Image/CoffeePackage/JaneiroEdition/Pingado_Mantiqueira_Janeiro.png"
+            }
+        ]
+    },
+    {
+        "mes": 2,
+        "nomeMes": "Fevereiro",
+        "cafes": [
+            {
+                "nome": "Folia",
+                "origem": "Matas de Minas - Minas Gerais",
+                "notas": [
+                    "Laranja",
+                    "Rapadura",
+                    "Mel"
+                ],
+                "imagem": "./Assets/Image/CoffeePackage/FevereiroEdition/Pingado_Folia_Fevereiro.png"
+            },
+            {
+                "nome": "Horizonte",
+                "origem": "Chapada Diamantina - Bahia",
+                "notas": [
+                    "Pessêgo",
+                    "Chá Branco",
+                    "Baunilha"
+                ],
+                "imagem": "./Assets/Image/CoffeePackage/FevereiroEdition/Pingado_Horizonte_Fevereiro.png"
+            },
+            {
+                "nome": "Varanda",
+                "origem": "Sul de Minas - Minas Gerais",
+                "notas": [
+                    "Chocolate ao Leite",
+                    "Caramelo",
+                    "Castanha"
+                ],
+                "imagem": "./Assets/Image/CoffeePackage/FevereiroEdition/Pingado_Varanda_Fevereiro.png"
+            }
+        ]
+    },
+    {
+        "mes": 3,
+        "nomeMes": "Marco",
+        "cafes": [
+            {
+                "nome": "Raizes",
+                "origem": "Sul de Minas - Minas Gerais",
+                "notas": [
+                    "Chocolate Amargo",
+                    "Castanhas",
+                    "Caramelo"
+                ],
+                "imagem": "./Assets/Image/CoffeePackage/MarcoEdition/Pingado_Raizes_Marco.png"
+            },
+            {
+                "nome": "Raizes - Edição Especial",
+                "origem": "Matas de Minas - Minas Gerais",
+                "notas": [
+                    "Flor de Laranjeira",
+                    "Mel",
+                    "Chá Branco"
+                ],
+                "imagem": "./Assets/Image/CoffeePackage/MarcoEdition/Pingado_RaizesEspecial_Marco.png"
+            },
+            {
+                "nome": "Sereno",
+                "origem": "Mantiqueira de Minas - Minas Gerais",
+                "notas": [
+                    "Chocolate",
+                    "Baunilha",
+                    "Nozes"
+                ],
+                "imagem": "./Assets/Image/CoffeePackage/MarcoEdition/Pingado_Sereno_Marco.png"
+            }
+        ]
+    },
+    {
+        "mes": 4,
+        "nomeMes": "Abril",
+        "cafes": [
+            {
+                "nome": "Colheita",
+                "origem": "Sul de Minas - Minas Gerais",
+                "notas": [
+                    "Rapadura",
+                    "Castanhas",
+                    "Chocolate"
+                ],
+                "imagem": "./Assets/Image/CoffeePackage/AbrilEdition/Pingado_Colheita_Abril.png"
+            },
+            {
+                "nome": "Brisa Suave",
+                "origem": "Mantiqueira de Minas - Minas Gerais",
+                "notas": [
+                    "Baunilha",
+                    "Mel",
+                    "Chocolate Branco"
+                ],
+                "imagem": "./Assets/Image/CoffeePackage/AbrilEdition/Pingado_BrisaSuave_Abril.png"
+            },
+            {
+                "nome": "Cacau",
+                "origem": "Mantiqueira de Minas - Minas Gerais",
+                "notas": [
+                    "Chocolate 70%",
+                    "Avelã",
+                    "Caramelo"
+                ],
+                "imagem": "./Assets/Image/CoffeePackage/AbrilEdition/Pingado_Cacau_Abril.png"
+            }
+        ]
+    },
+    {
+    "mes": 5,
+    "nomeMes": "Maio",
+    "cafes": [
+        {
+        "nome": "Serra Neblina",
+        "origem": "Mantiqueira de Minas - Minas Gerais",
+        "notas": [
+            "Caramelo",
+            "Cacau",
+            "Mel"
+        ],
+        "imagem": "./Assets/Image/CoffeePackage/MaioEdition/Pingado_SerraNeblina_Maio.png"
+        },
+        {
+        "nome": "Outono Brasileiro",
+        "origem": "Sul de Minas - Minas Gerais",
+        "notas": [
+            "Chocolate",
+            "Castanha",
+            "Rapadura"
+        ],
+        "imagem": "./Assets/Image/CoffeePackage/MaioEdition/Pingado_OutonoBrasileiro_Maio.png"
+        },
+        {
+        "nome": "Colheita Dourada",
+        "origem": "Chapada Diamantina - Bahia",
+        "notas": [
+            "Mel",
+            "Frutas amarelas",
+            "Baunilha"
+        ],
+        "imagem": "./Assets/Image/CoffeePackage/MaioEdition/Pingado_ColheitaDourada_Maio.png"
+        }
+        ]
+    },
+    {
+  "mes": 6,
+  "nomeMes": "Junho",
+  "cafes": [
+    {
+      "nome": "Fogueira",
+      "origem": "Sul de Minas - Minas Gerais",
+      "notas": [
+        "Chocolate amargo",
+        "Canela",
+        "Rapadura"
+      ],
+      "imagem": "./Assets/Image/CoffeePackage/JunhoEdition/Pingado_Fogueira_Junho.png"
+    },
+    {
+      "nome": "Arraiá Brasileiro",
+      "origem": "Cerrado Mineiro - Minas Gerais",
+      "notas": [
+        "Paçoca",
+        "Doce de leite",
+        "Castanhas"
+      ],
+      "imagem": "./Assets/Image/CoffeePackage/JunhoEdition/Pingado_ArraiaBrasileiro_Junho.png"
+    },
+    {
+      "nome": "Serra Fria",
+      "origem": "Mantiqueira de Minas - Minas Gerais",
+      "notas": [
+        "Caramelo",
+        "Avelã",
+        "Mel"
+      ],
+      "imagem": "./Assets/Image/CoffeePackage/JunhoEdition/Pingado_SerraFria_Junho.png"
+    }
+  ]
+},
+{
+  "mes": 7,
+  "nomeMes": "Julho",
+  "cafes": [
+    {
+      "nome": "Reserva Especial",
+      "origem": "Mantiqueira de Minas - Minas Gerais",
+      "notas": [
+        "Chocolate",
+        "Caramelo",
+        "Nozes"
+      ],
+      "imagem": "./Assets/Image/CoffeePackage/JulhoEdition/Pingado_Mantiqueira_Julho.png"
+    },
+    {
+      "nome": "Vale das Flores",
+      "origem": "Sul de Minas - Minas Gerais",
+      "notas": [
+        "Jasmim",
+        "Mel",
+        "Pêssego"
+      ],
+      "imagem": "./Assets/Image/CoffeePackage/JulhoEdition/Pingado_Florais_Julho.png"
+    },
+    {
+      "nome": "Microlote Caparaó",
+      "origem": "Caparaó - Espírito Santo",
+      "notas": [
+        "Laranjeira",
+        "Mel",
+        "Chocolate branco"
+      ],
+      "imagem": "./Assets/Image/CoffeePackage/JulhoEdition/Pingado_SUlDeMinas_Julho.png"
+    }
+  ]
+},
+{
+  "mes": 8,
+  "nomeMes": "Agosto",
+  "cafes": [
+    {
+      "nome": "Legado",
+      "origem": "Matas de Minas - Minas Gerais",
+      "notas": [
+        "Chocolate",
+        "Caramelo",
+        "Nozes"
+      ],
+      "imagem": "./Assets/Image/CoffeePackage/AgostoEdition/Pingado_Legado_Agosto.png"
+    },
+    {
+      "nome": "Fazenda Centenária",
+      "origem": "Alta Mogiana - São Paulo",
+      "notas": [
+        "Mel",
+        "Castanha",
+        "Cacau"
+      ],
+      "imagem": "./Assets/Image/CoffeePackage/AgostoEdition/Pingado_FazendaCentenaria_Agosto.png"
+    },
+    {
+      "nome": "Aurora da Serra",
+      "origem": "Mantiqueira de Minas - Minas Gerais",
+      "notas": [
+        "Jasmim",
+        "Mel",
+        "Chá branco"
+      ],
+      "imagem": "./Assets/Image/CoffeePackage/AgostoEdition/Pingado_AuroraDaSerra_Agosto.png"
+    }
+  ]
+},
+{
+  "mes": 9,
+  "nomeMes": "Setembro",
+  "cafes": [
+    {
+      "nome": "Primavera Brasileira",
+      "origem": "Chapada Diamantina - Bahia",
+      "notas": [
+        "Capim-limão",
+        "Mel",
+        "Limão siciliano"
+      ],
+      "imagem": "./Assets/Image/CoffeePackage/SetembroEdition/Pingado_PrimaveraBrasileira_Setembro.png"
+    },
+    {
+      "nome": "Florada",
+      "origem": "Matas de Minas - Minas Gerais",
+      "notas": [
+        "Jasmim",
+        "Mel",
+        "Chá branco"
+      ],
+      "imagem": "./Assets/Image/CoffeePackage/SetembroEdition/Pingado_Florada_Setembro.png"
+    },
+    {
+      "nome": "Horizonte Claro",
+      "origem": "Mantiqueira de Minas - Minas Gerais",
+      "notas": [
+        "Caramelo",
+        "Pêssego",
+        "Baunilha"
+      ],
+      "imagem": "./Assets/Image/CoffeePackage/SetembroEdition/Pingado_HorizonteClaro_Setembro.png"
+    }
+  ]
+}
+]

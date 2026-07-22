@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Petemoss&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+:root{
+    /* ==========================
+       FONTES
+    ========================== */
+
+    --fonte-logo: "Petemoss", cursive;
+    --fonte-titulo: "Cormorant Garamond", serif;
+    --fonte-texto: "Roboto Flex", sans-serif;
+
+
+    /* ==========================
+       TÍTULOS
+    ========================== */
+
+    --titulo-1: 5rem;
+    --titulo-2: 3rem;
+    --titulo-3: 2rem;
+    --titulo-4: 1.5rem;
+
+    --texto-grande: 1.25rem;
+    --texto-normal: 1rem;
+    --texto-pequeno: .875rem;
+
+
+    /* ==========================
+       PESOS
+    ========================== */
+
+    --peso-light: 300;
+    --peso-normal: 400;
+    --peso-medium: 500;
+    --peso-semibold: 600;
+    --peso-bold: 700;
+
+
+    /* ==========================
+       CORES
+    ========================== */
+
+    
+
+    --cor-fundo: #090707;
+    --cor-fundo-secundario: #121212;
+
+    --cor-branco: #F5F5F5;
+    --cor-cinza: #B6B6B6;
+
+    --cor-destaque: #38211A;
+    --cor-destaque-hover: #5A392B;
+
+    --cor-borda: rgba(255,255,255,.15);
+
+
+    /* ==========================
+       ESPAÇAMENTOS
+    ========================== */
+
+    --esp-1: .5rem;
+    --esp-2: 1rem;
+    --esp-3: 1.5rem;
+    --esp-4: 2rem;
+    --esp-5: 3rem;
+    --esp-6: 5rem;
+
+
+    /* ==========================
+       BORDER RADIUS
+    ========================== */
+
+    --radius-sm: .5rem;
+    --radius-md: .75rem;
+    --radius-lg: 1rem;
+    --radius-pill: 999px;
+
+
+    /* ==========================
+       TRANSIÇÕES
+    ========================== */
+
+    --transition: .3s ease;
+
+
+    /* ==========================
+       SOMBRAS
+    ========================== */
+
+    --shadow-sm: 0 4px 10px rgba(0,0,0,.15);
+    --shadow-md: 0 8px 25px rgba(0,0,0,.100);
+}
+
+
+/* ==========================
+       BOTÃO PRINCIPAL
+    ========================== */
+.btn-primary{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 28px;
+
+    font-family: var(--fonte-texto);
+    font-size: var(--texto-normal);
+    font-weight: var(--peso-medium);
+
+    color: var(--cor-branco);
+    background: linear-gradient(
+        to bottom,
+        #7B5137,
+        #5A392B,
+        #38211A
+    );
+    box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.25),
+    0 8px 18px rgba(0,0,0,.25);
+    border: none;
+
+    border-radius: var(--radius-sm);
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary:hover{
+    background: var(--cor-destaque-hover);
+}
+
+/* ==========================
+       BOTÃO SECUNDÁRIO
+    ========================== */
+
+.btn-secondary{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 28px;
+
+    font-family:var(--fonte-texto);
+    font-size:var(--texto-normal);
+
+    color:var(--cor-branco);
+
+    border:1px solid var(--cor-branco);
+    background:transparent;
+
+    border-radius:var(--radius-sm);
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--cor-branco);
+    color:var(--cor-fundo);
+
+}
+
+/* ==========================
+       BOTÃO TERCIÁRIO
+    ========================== */
+
+.btn-terciary{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 28px;
+
+    font-family:var(--fonte-texto);
+    font-size:var(--texto-normal);
+    font-weight: var(--peso-medium);
+
+    color:var(--cor-destaque);
+
+    border:1px solid var(--cor-destaque);
+    background:transparent;
+
+    border-radius:var(--radius-sm);
+
+    transition:var(--transition);
+
+    cursor:pointer;
+}
+
+.btn-terciary:hover{
+    background:var(--cor-destaque-hover);
+    color:var(--cor-branco);
+}
+
+/* ==========================
+       TIPOGRAFIAS
+    ========================== */
+
+.display{
+    font-family:var(--fonte-titulo);
+    font-size:var(--titulo-1);
+    font-weight:300;
+    line-height:1;
+}
+
+.h1{
+    font-family:var(--fonte-titulo);
+    font-size:var(--titulo-2);
+}
+
+.h2{
+    font-family:var(--fonte-titulo);
+    font-size:var(--titulo-3);
+}
+
+.body-lg{
+    font-size:var(--texto-grande);
+}
+
+.body{
+    font-size:var(--texto-normal);
+}
+
+.body-sm{
+    font-size:var(--texto-pequeno);
+}
