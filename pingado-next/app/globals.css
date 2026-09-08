@@ -1,26 +1,14 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme 
+{ 
+  --color-fundo: #090707; 
+  --color-fundo-secundario: #121212; 
+  --color-branco: #F5F5F5; 
+  --color-cinza: #B6B6B6; 
+  --color-destaque: #38211A; 
+  --color-destaque-hover: #5A392B; 
+  --font-logo: "Petemoss", cursive; 
+  --font-titulo: "Cormorant Garamond", serif; 
+  --font-texto: "Roboto Flex", sans-serif; 
 }
