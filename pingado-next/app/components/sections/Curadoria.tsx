@@ -58,7 +58,7 @@ export function Curadoria() {
     }
 
     return (
-        <section className="bg-[#17120F] text-white py-32">
+        <section className="bg-transparent text-white py-32">
 
             <div className="mx-auto max-w-6xl px-6">
 

@@ -6,7 +6,7 @@ import { Coffee } from "../types/Coffee";
 export async function listarCafes(): Promise<Coffee[]> {
 
     const response = await fetch(
-        `${API_URL}/api/coffees`
+        `${API_URL}/api/coffees/month/9/2026`
     );
 
     if (!response.ok) {
