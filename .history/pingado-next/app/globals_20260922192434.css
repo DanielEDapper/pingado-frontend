@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme 
+{ 
+  --color-fundo: #090707; 
+  --color-fundo-secundario: #121212; 
+  --color-branco: #F5F5F5; 
+  --color-cinza: #B6B6B6; 
+  --color-destaque: #38211A; 
+  --color-destaque-hover: #5A392B; 
+  --font-logo: "Petemoss", cursive; 
+  --font-titulo: "Cormorant Garamond", serif; 
+  --font-texto: "Roboto Flex", sans-serif; 
+}
