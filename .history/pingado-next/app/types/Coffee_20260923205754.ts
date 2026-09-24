@@ -4,6 +4,6 @@ export interface Coffee {
     description: string;
     sensoryNotes: string;
     image: string;
-    regionName: string;
+    regionName: number;
     monthlySelectionId: number | null;
 }

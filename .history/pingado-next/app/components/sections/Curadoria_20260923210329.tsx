@@ -146,8 +146,9 @@ export function Curadoria() {
 
                         </article>
 
-                    
-                    ))}
+                    )
+                )
+                    }
 
                 </div>
 

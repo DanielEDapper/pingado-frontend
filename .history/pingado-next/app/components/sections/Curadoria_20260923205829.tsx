@@ -90,7 +90,7 @@ export function Curadoria() {
                     {cafes.map((cafe) => (
 
                         <article
-                            key={cafe.id}
+                            key={cafe.regionName}
                             className="overflow-hidden rounded-3xl bg-[#f5f1eb] text-[#34251f]"
                         >
 
@@ -115,7 +115,6 @@ export function Curadoria() {
                                 <p className="text-xs uppercase tracking-[0.15em] text-amber-800">
                                     {cafe.regionName}
                                 </p>
-                                
 
                                 <h3 className="font-titulo text-3xl mt-4">
                                     {cafe.name}
@@ -146,7 +145,6 @@ export function Curadoria() {
 
                         </article>
 
-                    
                     ))}
 
                 </div>

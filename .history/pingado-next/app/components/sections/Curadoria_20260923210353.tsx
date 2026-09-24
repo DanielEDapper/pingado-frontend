@@ -88,6 +88,7 @@ export function Curadoria() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                     {cafes.map((cafe) => (
+                        console.log(``{cafe.regionName}``)
 
                         <article
                             key={cafe.id}

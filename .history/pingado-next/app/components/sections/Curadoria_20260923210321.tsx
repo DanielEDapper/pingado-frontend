@@ -146,8 +146,11 @@ export function Curadoria() {
 
                         </article>
 
+                    )
+                console.log({cafe.regionName})
+                )
                     
-                    ))}
+                    }
 
                 </div>
 

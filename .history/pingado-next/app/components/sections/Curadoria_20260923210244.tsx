@@ -115,7 +115,7 @@ export function Curadoria() {
                                 <p className="text-xs uppercase tracking-[0.15em] text-amber-800">
                                     {cafe.regionName}
                                 </p>
-                                
+                                console.log({})
 
                                 <h3 className="font-titulo text-3xl mt-4">
                                     {cafe.name}
@@ -146,7 +146,6 @@ export function Curadoria() {
 
                         </article>
 
-                    
                     ))}
 
                 </div>

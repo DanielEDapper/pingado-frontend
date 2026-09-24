@@ -113,7 +113,7 @@ export function Curadoria() {
                             <div className="p-6">
 
                                 <p className="text-xs uppercase tracking-[0.15em] text-amber-800">
-                                    {cafe.regionName}
+                                    {cafe.name}
                                 </p>
                                 
 

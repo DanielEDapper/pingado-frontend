@@ -51,7 +51,7 @@ export function Processo() {
                                 text-[300px]
                                 font-normal
                                 leading-none
-                                text-[#F2EDE3]/10
+                                text-[#F2EDE3]/8
                             "
                         >
                             {etapa.numero}
