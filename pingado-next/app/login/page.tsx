@@ -1,11 +1,11 @@
 "use client";
- 
+
 import Link from "next/link";
 import { useState } from "react";
 import { AuthLayout } from "../components/layout/AuthLayout";
 import { Button } from "../components/ui/Button";
 import { Input } from "../components/ui/Input";
- 
+
 function MailIcon() {
     return (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -14,7 +14,7 @@ function MailIcon() {
         </svg>
     );
 }
- 
+
 function LockIcon() {
     return (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -23,28 +23,66 @@ function LockIcon() {
         </svg>
     );
 }
- 
+
 export default function LoginPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
- 
-    function handleSubmit(event: React.FormEvent) {
+    const [error, setError] = useState("");
+    const [loading, setLoading] = useState(false);
+
+    async function handleSubmit(event: React.FormEvent) {
         event.preventDefault();
-        // TODO: integrar com o endpoint de login do backend
+
+        setError("");
+        setLoading(true);
+
+        try {
+            const response = await fetch(
+                "https://pingado-backend.onrender.com/api/auth/login",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        email,
+                        password,
+                    }),
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error("Email ou senha inválidos.");
+            }
+
+            const data = await response.json();
+
+            localStorage.setItem("token", data.token);
+
+            console.log("Login realizado com sucesso!");
+
+            window.location.href = "/";
+
+        } catch (error) {
+            console.error(error);
+            setError("Email ou senha inválidos.");
+        } finally {
+            setLoading(false);
+        }
     }
- 
+
     return (
         <AuthLayout>
-            <h1 className="font-titulo text-4xl leading-tight text-[#34251f] md:text-5xl">
+            <h1 className="font-titulo up text-4xl leading-tight text-[#34251f] md:text-5xl">
                 Bem-vindo de volta.
             </h1>
- 
+
             <p className="mt-3 font-texto text-sm text-[#34251f]/70">
                 Seu café está te esperando.
             </p>
- 
+
             <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-6">
- 
+
                 <Input
                     label="Email"
                     type="email"
@@ -53,7 +91,7 @@ export default function LoginPage() {
                     onChange={(e) => setEmail(e.target.value)}
                     icon={<MailIcon />}
                 />
- 
+
                 <div>
                     <Input
                         label="Senha"
@@ -63,7 +101,7 @@ export default function LoginPage() {
                         onChange={(e) => setPassword(e.target.value)}
                         icon={<LockIcon />}
                     />
- 
+
                     <div className="mt-2 text-right">
                         <Link
                             href="/esqueci-senha"
@@ -73,28 +111,44 @@ export default function LoginPage() {
                         </Link>
                     </div>
                 </div>
- 
-                <Button type="submit" variant="solid" fullWidth>
-                    Login
+
+                {error && (
+                    <p className="font-texto text-sm text-red-600">
+                        {error}
+                    </p>
+                )}
+
+                <Button
+                    type="submit"
+                    variant="solid"
+                    fullWidth
+                    disabled={loading}
+                >
+                    {loading ? "Entrando..." : "Login"}
                 </Button>
- 
+
                 <div className="flex items-center gap-4">
                     <span className="h-px flex-1 bg-stone-300" />
+
                     <span className="font-texto text-xs text-[#34251f]/60">
                         ou entre com
                     </span>
+
                     <span className="h-px flex-1 bg-stone-300" />
                 </div>
- 
+
                 <Button variant="outline-neutral" fullWidth>
                     Login com Google
                 </Button>
- 
+
             </form>
- 
+
             <p className="mt-8 text-center font-texto text-sm text-[#34251f]/70">
                 Não tem uma conta?{" "}
-                <Link href="/cadastro" className="font-semibold text-[#34251f]">
+                <Link
+                    href="/cadastro"
+                    className="font-semibold text-[#34251f]"
+                >
                     Cadastre-se
                 </Link>
             </p>

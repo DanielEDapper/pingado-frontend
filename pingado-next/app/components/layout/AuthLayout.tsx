@@ -20,7 +20,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
             <div className="flex w-full flex-col justify-center bg-[#f5f1eb] px-10 py-16 md:w-1/2 md:px-20">
                 <div className="mx-auto w-full max-w-md">
  
-                    <Link href="/" className="font-logo text-3xl text-[#34251f]">
+                    <Link href="/" className="font-logo text-4xl text-[#34251f]">
                         Pingado
                     </Link>
  
@@ -34,7 +34,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
             {/* Painel direito — foto + moldura (some em telas pequenas) */}
             <div className="relative hidden md:block md:w-1/2">
                 <Image
-                    src="/Assets/Image/plantacao-cafe.jpg"
+                    src="/Assets/Image/CoffeePlantationImagem.jpg"
                     alt="Plantação de café ao entardecer"
                     fill
                     priority
