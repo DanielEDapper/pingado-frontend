@@ -70,7 +70,7 @@ export function Curadoria() {
                         Edição limitada
                     </p>
 
-                    <h2 className="font-titulo uppercase text-6xl md:text-7xl mt-4">
+                    <h2 className="font-titulo uppercase text-8xl md:text-8xl mt-4">
                         A curadoria do mês
                     </h2>
 
@@ -113,7 +113,7 @@ export function Curadoria() {
                             <div className="p-6">
 
                                 <p className="text-xs uppercase tracking-[0.15em] text-amber-800">
-                                    {cafe.regionName}
+                                    {cafe.region?.name}
                                 </p>
                                 
 
@@ -150,6 +150,8 @@ export function Curadoria() {
                     ))}
 
                 </div>
+
+                <div className="mx-auto mt-20 h-px w-24 bg-amber-600" />
 
             </div>
 

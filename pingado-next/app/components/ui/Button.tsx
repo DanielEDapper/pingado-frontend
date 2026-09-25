@@ -1,44 +1,63 @@
 import type { ReactNode } from "react";
-
+ 
 interface ButtonProps {
     children: ReactNode;
     onClick?: () => void;
     type?: "button" | "submit" | "reset";
-    variant?: "primary" | "secondary";
+    variant?: "primary" | "secondary" | "solid" | "outline-neutral";
     disabled?: boolean;
+    fullWidth?: boolean;
 }
-
+ 
 export function Button({
     children,
     onClick,
     type = "button",
     variant = "primary",
     disabled = false,
+    fullWidth = false,
 }: ButtonProps) {
-
+ 
     const variants = {
+        // Usado sobre fundos escuros/fotográficos (ex: Hero)
         primary: `
             border-white
             text-white
             hover:bg-white
             hover:text-black
         `,
-
+ 
         secondary: `
             border-[#a9793f]
             text-[#a9793f]
             hover:bg-[#a9793f]
             hover:text-black
         `,
+ 
+        // CTA principal em fundos claros (ex: painel de login)
+        solid: `
+            border-[--color-destaque-hover]
+            bg-[--color-destaque-hover]
+            text-[--color-branco]
+            hover:bg-[--color-destaque]
+            hover:border-[--color-destaque]
+        `,
+ 
+        // Ação secundária em fundo claro (ex: "Login com Google")
+        "outline-neutral": `
+            border-stone-300
+            text-[#34251f]
+            hover:bg-stone-100
+        `,
     };
-
+ 
     return (
         <button
             type={type}
             onClick={onClick}
             disabled={disabled}
             className={`
-                min-w-[140px]
+                ${fullWidth ? "w-full" : "min-w-[140px]"}
                 rounded-md
                 border
                 px-6
