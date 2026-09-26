@@ -2,13 +2,21 @@
 
 import Link from "next/link";
 import { useState } from "react";
+
 import { AuthLayout } from "../components/layout/AuthLayout";
 import { Button } from "../components/ui/Button";
 import { Input } from "../components/ui/Input";
 
 function MailIcon() {
     return (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+        >
             <rect x="3" y="5" width="18" height="14" rx="2" />
             <path d="m3 7 9 6 9-6" />
         </svg>
@@ -17,7 +25,14 @@ function MailIcon() {
 
 function LockIcon() {
     return (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+        >
             <rect x="4" y="11" width="16" height="9" rx="2" />
             <path d="M8 11V8a4 4 0 0 1 8 0v3" />
         </svg>
@@ -37,6 +52,9 @@ export default function LoginPage() {
         setLoading(true);
 
         try {
+            console.log("EMAIL:", email);
+            console.log("SENHA:", password);
+
             const response = await fetch(
                 "https://pingado-backend.onrender.com/api/auth/login",
                 {
@@ -51,20 +69,27 @@ export default function LoginPage() {
                 }
             );
 
+            console.log("STATUS:", response.status);
+
+            const responseText = await response.text();
+
+            console.log("RESPOSTA:", responseText);
+
             if (!response.ok) {
                 throw new Error("Email ou senha inválidos.");
             }
 
-            const data = await response.json();
+            const data = JSON.parse(responseText);
+
+            console.log("TOKEN:", data.token);
 
             localStorage.setItem("token", data.token);
 
             console.log("Login realizado com sucesso!");
 
             window.location.href = "/";
-
         } catch (error) {
-            console.error(error);
+            console.error("ERRO NO LOGIN:", error);
             setError("Email ou senha inválidos.");
         } finally {
             setLoading(false);
@@ -73,16 +98,18 @@ export default function LoginPage() {
 
     return (
         <AuthLayout>
-            <h1 className="font-titulo up text-4xl leading-tight text-[#34251f] md:text-5xl">
-                Bem-vindo de volta.
+            <h1 className="font-titulo uppercase text-6xl leading-tight text-[#34251f] md:text-6xl">
+                Bem vindo de volta.
             </h1>
 
             <p className="mt-3 font-texto text-sm text-[#34251f]/70">
                 Seu café está te esperando.
             </p>
 
-            <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-6">
-
+            <form
+                onSubmit={handleSubmit}
+                className="mt-10 flex flex-col gap-6"
+            >
                 <Input
                     label="Email"
                     type="email"
@@ -120,7 +147,7 @@ export default function LoginPage() {
 
                 <Button
                     type="submit"
-                    variant="solid"
+                    variant="secondary"
                     fullWidth
                     disabled={loading}
                 >
@@ -137,10 +164,12 @@ export default function LoginPage() {
                     <span className="h-px flex-1 bg-stone-300" />
                 </div>
 
-                <Button variant="outline-neutral" fullWidth>
+                <Button
+                    variant="outline-neutral"
+                    fullWidth
+                >
                     Login com Google
                 </Button>
-
             </form>
 
             <p className="mt-8 text-center font-texto text-sm text-[#34251f]/70">

@@ -15,39 +15,44 @@ interface AuthLayoutProps {
 export function AuthLayout({ children }: AuthLayoutProps) {
     return (
         <div className="flex min-h-screen">
- 
-            {/* Painel esquerdo — conteúdo (login ou cadastro) */}
-            <div className="flex w-full flex-col justify-center bg-[#f5f1eb] px-10 py-16 md:w-1/2 md:px-20">
-                <div className="mx-auto w-full max-w-md">
- 
-                    <Link href="/" className="font-logo text-4xl text-[#34251f]">
-                        Pingado
-                    </Link>
- 
-                    <div className="mt-12">
-                        {children}
+
+            {/* Painel esquerdo */}
+            <div className="flex w-full flex-col justify-center bg-[#f5f1eb] px-10 py-16 md:w-[55%] md:px-20">
+                
+                <div className="mx-auto w-full max-w-2xl">
+
+                        <Link
+                            href="/"
+                            className="font-logo text-6xl whitespace-nowrap text-[#34251f]"
+                        >
+                            Pingado
+                        </Link>
+
+                        <div className="mt-12">
+                            {children}
+                        </div>
+
                     </div>
- 
-                </div>
+
             </div>
- 
-            {/* Painel direito — foto + moldura (some em telas pequenas) */}
-            <div className="relative hidden md:block md:w-1/2">
+
+            {/* Painel direito */}
+            <div className="relative hidden md:block md:w-[45%]">
+
                 <Image
-                    src="/Assets/Image/CoffeePlantationImagem.jpg"
+                    src="/CoffeePlantationImage.jpg"
                     alt="Plantação de café ao entardecer"
                     fill
                     priority
-                    className="object-cover"
+                    className="z-0 object-cover"
                 />
- 
-                {/* Overlay escuro sutil, pra garantir contraste da moldura */}
-                <div className="absolute inset-0 bg-black/10" />
- 
-                {/* Moldura fina */}
-                <div className="absolute inset-8 border border-[#f5f1eb]/80" />
+
+                <div className="absolute inset-0 z-10 bg-black/40" />
+
+                <div className="absolute inset-8 z-20 border-2 border-[#f5f1eb]/80" />
+
             </div>
- 
+
         </div>
     );
 }

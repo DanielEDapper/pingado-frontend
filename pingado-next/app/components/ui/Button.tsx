@@ -28,10 +28,11 @@ export function Button({
         `,
  
         secondary: `
-            border-[#a9793f]
-            text-[#a9793f]
-            hover:bg-[#a9793f]
-            hover:text-black
+            bg-[#a9793f]
+            text-[#F5F1EB]
+            hover:border-[#a9793f]
+            hover:bg-[#F5F1EB]
+            hover:text-[#a9793f]
         `,
  
         // CTA principal em fundos claros (ex: painel de login)
@@ -47,7 +48,9 @@ export function Button({
         "outline-neutral": `
             border-stone-300
             text-[#34251f]
-            hover:bg-stone-100
+            hover:border-amber-700
+            hover:ring-2
+            hover:ring-amber-700/20
         `,
     };
  

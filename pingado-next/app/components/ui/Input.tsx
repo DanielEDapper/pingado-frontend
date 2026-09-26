@@ -24,7 +24,7 @@ export function Input({
     return (
         <div className="flex flex-col gap-2">
             {label && (
-                <label className="text-sm font-semibold">
+                <label className="text-sm font-semibold text-[#34251f]">
                     {label}
                 </label>
             )}
@@ -53,6 +53,7 @@ export function Input({
                     disabled={disabled}
                     className={`
                         w-full
+                        text-[#34251f]
                         rounded-lg
                         border
                         border-stone-300

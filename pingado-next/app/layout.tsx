@@ -1,5 +1,6 @@
 import {
   Petemoss,
+  Playfair_Display,
   Cormorant_Garamond,
   Roboto_Flex,
   Bodoni_Moda,
@@ -13,6 +14,12 @@ const logo = Petemoss({
 
 const titulo = Cormorant_Garamond({
   variable: "--font-titulo",
+  subsets: ["latin"],
+});
+
+const teste = Playfair_Display({
+  variable: "--font-teste",
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -34,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${logo.variable} ${titulo.variable} ${texto.variable} ${numero.variable} bg-black text-white antialiased`}
+      className={`${logo.variable} ${titulo.variable} ${texto.variable} ${numero.variable} ${teste.variable} bg-black text-white antialiased`}
     >
       <body>{children}</body>
     </html>
